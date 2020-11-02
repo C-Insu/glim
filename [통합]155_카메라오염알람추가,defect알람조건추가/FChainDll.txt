@@ -1,0 +1,20 @@
+사용법은 다음과 같습니다.
+
+ 
+
+double dCx, dCy, dCompactness, dAngle, dPos[4][2], dShortLength, dLongLength;
+
+ 
+
+ FChain_Center(i, &dCx, &dCy);
+
+ FChain_FindAngle(i, &dAngle);
+
+ FChain_FindMinRect(i, dCx, dC	y, dAngle, dPos);  //Blob을 포함하는 최소 사각형 구하는 함수
+
+단변:      dShortLength=sqrt( (dPos[0][0]-dPos[1][0])*(dPos[0][0]-dPos[1][0])+(dPos[0][1]-dPos[1][1])*(dPos[0][1]-dPos[1][1])); if(dShortLength<1 || dShortLength>1000) dShortLength=1;
+
+장변:      dLongLength=sqrt( (dPos[2][0]-dPos[1][0])*(dPos[2][0]-dPos[1][0])+(dPos[2][1]-dPos[1][1])*(dPos[2][1]-dPos[1][1]));  if(dLongLength<1 || dLongLength>1000)  dLongLength=1;
+
+ 
+

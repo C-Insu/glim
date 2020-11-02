@@ -1,0 +1,30 @@
+1) 10개의 File을 복사한다.
+	PylonGenericInterface.Lib
+	PylonGenericInterfaced.Lib
+	ylonGenericInterface.DLL
+	PylonGenericInterfaced.Dll
+	PylonGenericInterface.h
+	SlitInspect.cpp
+	SlitInepect.h
+	ScoutGrabber.cpp
+	ScoutGrabber.h
+	SlitAreaDocument.txt
+
+2)  vision.cpp/h를 없앤다.
+3)	ScoutGrabber.cpp/h를 추가한다.
+4)	Stdafx.h에  global.h앞에 다음 추가   #include "ScoutGrabber.h"
+5)  VisWebView.h에 	int CopyMilImgForSlit(LPBYTE fmLeft, LPBYTE fmRight); 를 추가한다.
+6)  Global.h에 다음 추가
+	#define NEL5			5
+	#define NEL6			6
+	#define NEL7			7
+	#define NEL8			8
+7)  int CData::GetVisionLine() 함수를 수정 
+8)  int CInspect::Inspect(CImage* pImage, CData *pData, CWnd* pwnd) 일부 수정 
+9) 	inspect.h에 다음 함수 Prototype 추가 void   FindDefectSlitArea(CImage* pImage, CData *pData); 
+
+
+
+
+--------버그 수정---------
+UINT ThreadMain(LPVOID lParam) 를 사용하지 않는다.

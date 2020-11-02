@@ -1,0 +1,37 @@
+
+11			2017-01-25		브로드캐스트 버퍼 사이즈 버그 수정(Max_defect -> max_realdefect)
+10			2017-01-25		스크래치 이미지 축소 저장, 
+10			2017-01-24		스크래치 불량 이미지 복사, 호기별 스케일 버그,
+09	103		2017-01-24		braodcasing  m_ndefectcount 버그 수정 
+08	102		2017-01-24		스크래치 검사추가 - 검사시간 단축 필요.
+
+param 16 주기 사용 여부 결정.	0 == 미사용.
+								1 = 사용.
+								other = 미사용.
+								
+						GL3					GL4		
+param1	thup
+param2	thdn
+param3	size
+param4	NotInsArea
+param5					PinholeLageSize		진원도
+param6					S/F 구분 size		군집사이즈
+param7					P/H 그룹사이즈		군집카운트
+param8					라인값				강사이즈
+param9	Camdist
+param10	Tape Distance
+param11	밝기상한
+param12	밝기하한
+param13	ThWhite	param17==2 일때
+param14	ThBlack	param17==2 일때
+param15	CamFlip
+param16	CycleUse ??
+param17	Th White/Black USe = 2
+param18	Tac X Pos
+param19					강백점				DyeSpot Angle Skip 사용 = 1
+param20	자동에지
+param21	약백
+param22	약흑
+param23	약사이즈
+param24	사이즈조건	1이면 X/Y 사이즈 이상이어야 불량
+param25	2 Level
